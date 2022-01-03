@@ -1,0 +1,5 @@
+(fp_lib_table
+  (lib (name digikey-footprints)(type KiCad)(uri ${MY_SYMBOL_DIR}/digikey-kicad-library/digikey-footprints.pretty)(options "")(descr ""))
+  (lib (name ECEA1CKS101I)(type KiCad)(uri ${MY_SYMBOL_DIR}/SnapEDA/ECEA1CKS101I)(options "")(descr ""))
+  (lib (name Ligia)(type KiCad)(uri /Users/jgonzalez/Documents/Personal/Ligia)(options "")(descr ""))
+)
