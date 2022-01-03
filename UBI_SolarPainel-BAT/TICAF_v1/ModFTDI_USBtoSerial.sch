@@ -1,0 +1,328 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 4
+Title "Conversor USB para Serial"
+Date "2021-12-24"
+Rev "1.0"
+Comp "UBI"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L FT232RL-REEL:FT232RL-REEL U3
+U 1 1 61C79CCC
+P 6950 3850
+F 0 "U3" H 6950 5117 50  0000 C CNN
+F 1 "FT232RL-REEL" H 6950 5026 50  0000 C CNN
+F 2 "SnapEDA_Sym2:SOP65P780X200-28N" H 6950 3850 50  0001 L BNN
+F 3 "https://pt.mouser.com/datasheet/2/163/DS_FT232R-11534.pdf" H 6950 3850 50  0001 L BNN
+F 4 "Future Technology Devices International Ltd" H 6950 3850 50  0001 L BNN "MANUFACTURER"
+	1    6950 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 61C7C479
+P 3350 4300
+F 0 "#PWR0104" H 3350 4050 50  0001 C CNN
+F 1 "GND" H 3355 4127 50  0000 C CNN
+F 2 "" H 3350 4300 50  0001 C CNN
+F 3 "" H 3350 4300 50  0001 C CNN
+	1    3350 4300
+	1    0    0    -1  
+$EndComp
+Text Label 7550 2850 0    50   ~ 0
++5V
+$Comp
+L Device:C C5
+U 1 1 61C88A7E
+P 4300 3700
+F 0 "C5" H 4415 3746 50  0000 L CNN
+F 1 "0.1u" H 4415 3655 50  0000 L CNN
+F 2 "SnapEDA_Sym2:CAP_ECHU1C104GX5" H 4338 3550 50  0001 C CNN
+F 3 "https://pt.mouser.com/datasheet/2/315/ABD0000C173-947527.pdf" H 4300 3700 50  0001 C CNN
+	1    4300 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L EEEFN0J100R:EEEFN0J100R C6
+U 1 1 61C8AFDB
+P 4750 3650
+F 0 "C6" V 4754 3780 50  0000 L CNN
+F 1 "10u" V 4845 3780 50  0000 L CNN
+F 2 "SnapEDA_Sym2:CAP_EEEFN0J100R" H 4750 3650 50  0001 L BNN
+F 3 "https://pt.mouser.com/datasheet/2/315/RDE0000C1259-1772497.pdf" H 4750 3650 50  0001 L BNN
+F 4 "10-Oct-19" H 4750 3650 50  0001 L BNN "PARTREV"
+F 5 "Manufacturer Recommendations" H 4750 3650 50  0001 L BNN "STANDARD"
+F 6 "5.8mm" H 4750 3650 50  0001 L BNN "MAXIMUM_PACKAGE_HEIGHT"
+F 7 "Panasonic" H 4750 3650 50  0001 L BNN "MANUFACTURER"
+	1    4750 3650
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR0105
+U 1 1 61C85F0F
+P 5350 2950
+F 0 "#PWR0105" H 5350 2800 50  0001 C CNN
+F 1 "+5V" H 5365 3123 50  0000 C CNN
+F 2 "" H 5350 2950 50  0001 C CNN
+F 3 "" H 5350 2950 50  0001 C CNN
+	1    5350 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 3350 5350 3100
+Wire Wire Line
+	3650 3350 4300 3350
+Wire Wire Line
+	4300 3350 4300 3550
+Connection ~ 4300 3350
+Wire Wire Line
+	4300 3350 4750 3350
+Wire Wire Line
+	4750 3350 4750 3550
+Connection ~ 4750 3350
+Wire Wire Line
+	4300 3850 4300 4150
+Wire Wire Line
+	4300 4150 3350 4150
+Wire Wire Line
+	3350 4150 3350 4300
+Wire Wire Line
+	4750 3850 4750 4150
+Wire Wire Line
+	4750 4150 4300 4150
+Connection ~ 4300 4150
+Text Label 3650 3250 0    50   ~ 0
+USB_D-
+Text Label 3650 3150 0    50   ~ 0
+USB_D+
+Text Label 7550 4150 0    50   ~ 0
+USB_D+
+Text Label 7550 4250 0    50   ~ 0
+USB_D-
+$Comp
+L power:GND #PWR0106
+U 1 1 61C94D47
+P 7950 4900
+F 0 "#PWR0106" H 7950 4650 50  0001 C CNN
+F 1 "GND" H 7955 4727 50  0000 C CNN
+F 2 "" H 7950 4900 50  0001 C CNN
+F 3 "" H 7950 4900 50  0001 C CNN
+	1    7950 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 4750 7950 4750
+Wire Wire Line
+	7950 4750 7950 4900
+Wire Wire Line
+	7550 4650 7950 4650
+Wire Wire Line
+	7950 4650 7950 4750
+Connection ~ 7950 4750
+Wire Wire Line
+	7550 4550 7950 4550
+Wire Wire Line
+	7950 4550 7950 4650
+Connection ~ 7950 4650
+Wire Wire Line
+	7550 4450 7950 4450
+Wire Wire Line
+	7950 4450 7950 4550
+Connection ~ 7950 4550
+Wire Wire Line
+	4750 3350 5350 3350
+$Comp
+L power:GND #PWR0107
+U 1 1 61C97D10
+P 8500 3500
+F 0 "#PWR0107" H 8500 3250 50  0001 C CNN
+F 1 "GND" H 8505 3327 50  0000 C CNN
+F 2 "" H 8500 3500 50  0001 C CNN
+F 3 "" H 8500 3500 50  0001 C CNN
+	1    8500 3500
+	1    0    0    -1  
+$EndComp
+Text HLabel 4550 3100 0    50   Output ~ 0
+PWR
+Connection ~ 5350 3100
+Wire Wire Line
+	5350 3100 5350 2950
+Text HLabel 7650 2950 2    50   Output ~ 0
+PWR
+Wire Wire Line
+	7550 2950 7650 2950
+Text HLabel 7650 3550 2    50   Output ~ 0
+TX_DATA
+$Comp
+L Device:C C7
+U 1 1 61C8928E
+P 8500 3350
+F 0 "C7" H 8615 3396 50  0000 L CNN
+F 1 "0.1u" H 8615 3305 50  0000 L CNN
+F 2 "SnapEDA_Sym2:CAP_ECHU1C104GX5" H 8538 3200 50  0001 C CNN
+F 3 "https://pt.mouser.com/datasheet/2/315/ABD0000C173-947527.pdf" H 8500 3350 50  0001 C CNN
+	1    8500 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8500 3150 8500 3200
+Wire Wire Line
+	7550 3150 8500 3150
+Wire Wire Line
+	7550 3550 7650 3550
+Text HLabel 6350 3550 0    50   Input ~ 0
+RX_DATA
+Wire Wire Line
+	7550 3650 7650 3650
+Wire Wire Line
+	5500 3250 5500 4150
+Wire Wire Line
+	5500 4150 4750 4150
+Wire Wire Line
+	5500 3250 6350 3250
+Connection ~ 4750 4150
+Text HLabel 7650 3650 2    50   BiDi ~ 0
+DTR
+Text HLabel 6350 3750 0    50   BiDi ~ 0
+CTS
+$Comp
+L Connector:Conn_01x02_Male J3
+U 1 1 61CA3B72
+P 5050 2900
+F 0 "J3" V 5158 2944 50  0000 L CNN
+F 1 "Conn_01x02_Male" V 5203 2944 50  0001 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 5050 2900 50  0001 C CNN
+F 3 "~" H 5050 2900 50  0001 C CNN
+	1    5050 2900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5050 3100 5350 3100
+Wire Wire Line
+	4550 3100 4950 3100
+$Comp
+L Device:LED D3
+U 1 1 61CA8817
+P 5300 4600
+F 0 "D3" H 5293 4345 50  0000 C CNN
+F 1 "LED" H 5293 4436 50  0000 C CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 5300 4600 50  0001 C CNN
+F 3 "https://dammedia.osram.info/media/resource/hires/osram-dam-5174592/LB%20Q39G_EN.pdf" H 5300 4600 50  0001 C CNN
+	1    5300 4600
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D4
+U 1 1 61CAB270
+P 5300 5000
+F 0 "D4" H 5293 4745 50  0000 C CNN
+F 1 "LED" H 5293 4836 50  0000 C CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 5300 5000 50  0001 C CNN
+F 3 "https://dammedia.osram.info/media/resource/hires/osram-dam-5174592/LB%20Q39G_EN.pdf" H 5300 5000 50  0001 C CNN
+	1    5300 5000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5450 4600 5800 4600
+Wire Wire Line
+	5800 4600 5800 4150
+Wire Wire Line
+	5800 4150 6350 4150
+Wire Wire Line
+	5450 5000 6000 5000
+Wire Wire Line
+	6000 5000 6000 4250
+Wire Wire Line
+	6000 4250 6350 4250
+$Comp
+L Device:R R3
+U 1 1 61CAD8D7
+P 4750 4600
+F 0 "R3" V 4543 4600 50  0000 C CNN
+F 1 "220R" V 4634 4600 50  0000 C CNN
+F 2 "SnapEDA_Sym2:RES_ERA2VEB2200X" V 4680 4600 50  0001 C CNN
+F 3 "https://pt.mouser.com/datasheet/2/315/Panasonic_Resistor_Thin_Film_(ERA-xV_2c_ERA-xK_Ser-1815278.pdf" H 4750 4600 50  0001 C CNN
+	1    4750 4600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4900 4600 5150 4600
+$Comp
+L Device:R R4
+U 1 1 61CAFC97
+P 4750 5000
+F 0 "R4" V 4957 5000 50  0000 C CNN
+F 1 "220R" V 4866 5000 50  0000 C CNN
+F 2 "SnapEDA_Sym2:RES_ERA2VEB2200X" V 4680 5000 50  0001 C CNN
+F 3 "https://pt.mouser.com/datasheet/2/315/Panasonic_Resistor_Thin_Film_(ERA-xV_2c_ERA-xK_Ser-1815278.pdf" H 4750 5000 50  0001 C CNN
+	1    4750 5000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4900 5000 5150 5000
+$Comp
+L power:+5V #PWR0108
+U 1 1 61CB1722
+P 4000 4550
+F 0 "#PWR0108" H 4000 4400 50  0001 C CNN
+F 1 "+5V" H 4015 4723 50  0000 C CNN
+F 2 "" H 4000 4550 50  0001 C CNN
+F 3 "" H 4000 4550 50  0001 C CNN
+	1    4000 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 4600 4000 4600
+Wire Wire Line
+	4000 4600 4000 4550
+Wire Wire Line
+	4600 5000 4000 5000
+Wire Wire Line
+	4000 5000 4000 4600
+Connection ~ 4000 4600
+Text GLabel 6100 3150 0    50   Output ~ 0
+RESET
+Wire Wire Line
+	6100 3150 6350 3150
+$Comp
+L USB-A-S-X-X-SM2:USB-A-S-X-X-SM2 J2
+U 1 1 61EF3961
+P 3250 3150
+F 0 "J2" H 3250 2600 50  0000 C CNN
+F 1 "USB_A" H 3250 2700 50  0000 C CNN
+F 2 "SnapEDA_Sym2:SAMTEC_USB-A-S-X-X-SM2" H 3250 3150 50  0001 L BNN
+F 3 "" H 3250 3150 50  0001 L BNN
+F 4 "T" H 3250 3150 50  0001 L BNN "PARTREV"
+F 5 "Manufacturer Recommendations" H 3250 3150 50  0001 L BNN "STANDARD"
+F 6 "7.8 mm" H 3250 3150 50  0001 L BNN "MAXIMUM_PACKAGE_HEIGHT"
+F 7 "Samtec" H 3250 3150 50  0001 L BNN "MANUFACTURER"
+	1    3250 3150
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR010
+U 1 1 61EFD05E
+P 4050 2800
+F 0 "#PWR010" H 4050 2550 50  0001 C CNN
+F 1 "GND" H 4055 2627 50  0000 C CNN
+F 2 "" H 4050 2800 50  0001 C CNN
+F 3 "" H 4050 2800 50  0001 C CNN
+	1    4050 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 3050 3750 3050
+Wire Wire Line
+	4050 2650 4050 2800
+Wire Wire Line
+	3750 3050 3750 2650
+Wire Wire Line
+	3750 2650 4050 2650
+$EndSCHEMATC
