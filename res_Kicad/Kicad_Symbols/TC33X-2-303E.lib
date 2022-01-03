@@ -1,0 +1,43 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#(c) SnapEDA 2016 (snapeda.com)
+#This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA) with Design Exception 1.0
+#
+# TC33X-2-303E
+#
+DEF TC33X-2-303E R 0 40 Y N 1 L N
+F0 "R" 120 150 50 H V L BNN
+F1 "TC33X-2-303E" 100 -200 50 H V L BNN
+F2 "TRIM_TC33X-2-303E" 0 0 50 H I L BNN
+F3 "" 0 0 50 H I L BNN
+F4 "Unavailable" 0 0 50 H I L BNN "AVAILABILITY"
+F5 "TC33X-2-104E" 0 0 50 H I L BNN "MP"
+F6 "None" 0 0 50 H I L BNN "PRICE"
+F7 "Res Trimmer 100K Ohm 25% 1/10W 1_Elec_/1_Mech_Turn _3 X 3.8mm_ Foot Print SMD Embossed T/R" 0 0 50 H I L BNN "DESCRIPTION"
+F8 "Bourns" 0 0 50 H I L BNN "PACKAGE"
+F9 "Bourns" 0 0 50 H I L BNN "MF"
+DRAW
+P 2 0 0 6 200 0 180 0 N
+P 2 0 0 10 180 0 150 -40 N
+P 2 0 0 10 150 -40 100 50 N
+P 2 0 0 10 100 50 50 -40 N
+P 2 0 0 10 50 -40 0 50 N
+P 2 0 0 10 0 50 -50 -40 N
+P 2 0 0 10 -50 -40 -100 50 N
+P 2 0 0 10 -100 50 -150 -40 N
+P 2 0 0 10 -150 -40 -180 0 N
+P 2 0 0 6 -180 0 -200 0 N
+P 2 0 0 8 0 50 -50 100 N
+P 2 0 0 8 50 100 0 50 N
+P 2 0 0 8 -50 100 50 100 N
+P 2 0 0 6 -55 -90 45 -90 N
+P 2 0 0 6 45 -90 -5 -115 N
+P 2 0 0 6 -5 -115 -5 -65 N
+P 2 0 0 6 -5 -65 45 -90 N
+X ~ 3 400 0 200 L 40 40 0 0 P 
+X ~ 2 0 300 200 D 40 40 0 0 P 
+X ~ 1 -400 0 200 R 40 40 0 0 P 
+ENDDRAW
+ENDDEF
+#
+# End Library
